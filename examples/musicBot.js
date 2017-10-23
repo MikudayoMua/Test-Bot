@@ -1,5 +1,5 @@
 const Client = require('discord.js').Client;
-const Auth = require('./auth.json');
+const BOT = require('./BOT.json');
 
 const music = require('../');
 
@@ -14,4 +14,4 @@ music(client, {
 });
 
 // Login.
-client.loginWithToken(Auth.token);
+client.loginWithToken(BOT_TOKEN);
