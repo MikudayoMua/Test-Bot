@@ -11,11 +11,11 @@ client.on('message', message => {
   	}
 });
 
-bot.on('ready', function() {
+client.on('ready', function() {
     console.log(bot.user.username);
 });
 
-bot.on('message', function() {
+client.on('message', function() {
     if (message.content === "$loop") { 
       var interval = setInterval (function () {
         message.channel.send("มาคุยกับ@Mikudayo! Muaหรือชวนพี่เข้าเล่นเกมได้นะคับพี่เขาขี้เหงา")
