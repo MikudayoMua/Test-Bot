@@ -18,16 +18,6 @@ bot.on('ready', (ready) => {
 
 });
 
-client.on('ready', () => {
-  console.log(`Logged in as ${client.user.tag}!`);
-});
-
-client.on('message', msg => {
-  if (msg.content === 'รักหยวน') {
-    msg.reply('ผมก็รักคุณ');
-  }
-});
-
 bot.on('message', function (message) {
     const member = message.member;
     const msg = message.content.toLowerCase();
