@@ -1,19 +1,14 @@
-//Get discord.js
-const Discord = require('discord.js');
+const Discord = require("discord.js");
+const client = new Discord.Client();
 
-//Create client instance as bot
-const botRem = new Discord.Client();
-
-//Set listener on 'ready'
-botRem.on('ready', () => {
-  console.log('Rem ready!');
+client.on('ready', () => {
+  console.log(`Logged in as ${client.user.tag}!`);
 });
 
-//Set listener on 'message'
-botRem.on('message', message => {
-  if (message.content === 'ฉันรักเอมิเลีย') {
-    message.reply('ถึงยังไงเรมก็รักสุบารุค่ะ');
+client.on('message', msg => {
+  if (msg.content === 'รักหยวน') {
+    msg.reply('ผมก็รักคุณ');
   }
 });
 
-botRem.login('YOUR BOT TOKEN HERE!!!');
+client.login('MzcyMDE4NDM1NDkzODU1MjMy.DM_Krw.1U0XSWAwI4FV25K94NtP5jk-y6Y');
