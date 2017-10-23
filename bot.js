@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-const bot = new Discord.Client();
+const client = new Discord.Client();
 const ytdl = require('ytdl-core');
 const request = require('request');
 const fs = require('fs');
@@ -11,22 +11,6 @@ var config = JSON.parse(fs.readFileSync('./settings.json', 'utf-8'));
 const yt_api_key = config.yt_api_key;
 const bot_controller = config.bot_controller;
 const prefix = config.prefix;
-const discord_token = config.discord_token;
-
-client.on('ready', () => {
-    console.log('I am ready!');
-});
-
-client.on('message', message => {
-    if (message.content === 'รักหยวน') {
-    	message.reply('ผมก็รักคุณ');
-  	}
-});
-
-client.on('ready', (ready) => {
-    console.log(`I am ${bot.user.username}, and I am ready to go.`);
-
-});
 
 client.on('message', function (message) {
     const member = message.member;
@@ -41,7 +25,7 @@ client.on('message', function (message) {
     var skippers = [];
 
     if(msg.startsWith(prefix + 'play')){
-        if(member.voiceChannel || bot.guilds.get('322517098846748673').voiceConnection != null) {
+        if(member.voiceChannel || client.guilds.get('322517098846748673').voiceConnection != null) {
         if(queue.length > 0 || isPlaying){
             getID(args, function(id) {
                 add_to_queue(id);
@@ -158,4 +142,4 @@ function search_video(query, callback) {
 function isYoutube(str) {
     return str.toLowerCase().indexOf("youtube.com") > -1;}
 
-client.login(process.env.BOT_TOKEN);
+client.login(process.env.BOT_TOKEN);﻿
