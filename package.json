@@ -1,13 +1,25 @@
 {
-  "name": "Test",
-  "description": "Test",
-  "version": "0.0.0",
+  "name": "Test-Bot",
+  "version": "1.0.3",
+  "description": "Music plugin for discord.js bots",
   "main": "bot.js",
   "scripts": {
-    "start": "node bot.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MikudayoMua/Test-Bot.git"
+  },
+  "author": "Ruiqi Mao",
+  "license": "ISC",
+  "keywords": [
+    "discord",
+    "discord.js",
+    "music",
+    "bot",
+    "plugin"
+  ],
   "dependencies": {
-    "discord.js": "11.1.0",
-    "request": "2.81.0"
+    "youtube-dl": "^1.11.1"
   }
 }
