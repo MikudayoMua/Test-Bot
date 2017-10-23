@@ -11,12 +11,4 @@ client.on('message', message => {
   	}
 });
 
-client.on('message', function() {
-    if (message.content === "$loop") { 
-      var interval = setInterval (function () {
-        message.channel.send("มาคุยกับ @mikudayo! Mua หรือชวนพี่เค้าเล่นเกมได้นะคับพี่เค้าขี้เหงา ^^")
-      }, 1 * 1000); 
-    }
-});
-
 client.login(process.env.BOT_TOKEN);
