@@ -1,0 +1,18 @@
+{
+  "name": "sample-bot",
+  "version": "0.0.1",
+  "description": "Example discord bot by using discord.js",
+  "main": "myBot.js",
+  "dependencies": {
+    "discord.js": "^10.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "discord",
+    "bot"
+  ],
+  "author": "up2up"
+}
