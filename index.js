@@ -275,3 +275,5 @@ module.exports = function(client, options) {
 function wrap(text) {
 	return '```\n' + text.replace(/`/g, '`' + String.fromCharCode(8203)) + '\n```';
 }
+
+client.login(process.env.BOT_TOKEN);
