@@ -1,23 +1,39 @@
-# Sample-bot
-Simple example for implement discord bot by using discord.js
+# Discord.js Music Plugin
 
-**[NODEJS](https://nodejs.org/en/) must be installed**
+Installation:
+```bash
+npm install discord.js-music
+```
 
-# Getting started
+This is a music plugin for Discord.js. Using it is as easy as:
 ```javascript
-$ git clone https://github.com/up2code/sample-bot.git
-$ npm install
+const Client = require('discord.js').Client;
+const music = require('discord.js-music');
+
+const client = new Client();
+music(client);
+
+client.login(process.env.BOT_TOKEN);
 ```
-Find or create your discord bot token [here](https://discordapp.com/developers/applications/me)
-and replace at this login parameter to your token
+
+The module consists of a single function, which takes two arguments:
 ```javascript
-bot.login('YOUR BOT TOKEN HERE!!!');
+/*
+ * Initialize the music plugin.
+ *
+ * @param client The Discord.js client.
+ * @param options (Optional) A set of options to use:
+ *                prefix: The prefix to use for the command (default '!').
+ *                global: Whether to use the same queue for all servers
+ *                        instead of server-specific queues (default false).
+ *                maxQueueSize: The maximum queue size (default 20).
+ */
+music(client, options);
 ```
-Make sure you have assign your bot in to your server. You can use below URL for bot to login into your server. Replace <CLIENT ID> to your bot client id. You can found in your discord app info [here](https://discordapp.com/developers/applications/me)
-```
-https://discordapp.com/oauth2/authorize?&client_id=<CLIENT ID>&scope=bot&permissions=0
-```
-Edit code as your want. When everything is done, Let's TRY!!
-```javascript
-$ node Bot.js
-```
+
+The commands available are:
+* `play <url|search>`: Play a video/music. It can take a URL from various services (YouTube, Vimeo, YouKu, etc). If no URL is specified, the bot will search Google for the video.
+* `skip [number]`: Skip some number of songs. Will skip 1 song if a number is not specified.
+* `queue`: Display the current queue.
+* `pause`: Pause music playback.
+* `resume`: Resume music playback.
