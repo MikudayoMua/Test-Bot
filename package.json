@@ -1,8 +1,8 @@
 {
-  "name": "sample-bot",
-  "version": "0.0.1",
+  "name": "bot",
+  "version": "0.0.0",
   "description": "Example discord bot by using discord.js",
-  "main": "myBot.js",
+  "main": "Bot.js",
   "dependencies": {
     "discord.js": "^10.0.1"
   },
