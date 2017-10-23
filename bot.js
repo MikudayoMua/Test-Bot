@@ -11,7 +11,6 @@ var config = JSON.parse(fs.readFileSync('./settings.json', 'utf-8'));
 const yt_api_key = config.yt_api_key;
 const bot_controller = config.bot_controller;
 const prefix = config.prefix;
-const discord_token = config.discord_token;
 
 bot.on('ready', (ready) => {
     console.log(`I am ${bot.user.username}, and I am ready to go.`);
